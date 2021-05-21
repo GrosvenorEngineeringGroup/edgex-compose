@@ -353,6 +353,34 @@ services:
     ports:
     - 127.0.0.1:4000:4000/tcp
     read_only: true
+  # device-bacnet:
+  #   container_name: edgex-device-bacnet
+  #   image: edgexfoundry/docker-device-bacnet-c:1.3.1
+  #   command: ["/startup.sh", "ip"]
+  #   hostname: edgex-device-bacnet
+  #   networks:
+  #     edgex-network: {}
+  #   depends_on:
+  #     - data
+  #     - command
+  #   devices:
+  #     - "/dev/ttyUSB0:/dev/ttyUSB0"
+  device-bacnet2:
+    container_name: edgex-device-bacnet2
+    image: bacnet-device-service-test
+    command: ["ip"]
+    hostname: edgex-device-bacnet2
+    networks:
+      edgex-network: {}
+    depends_on:
+      - data
+      - command
+    ports:
+    - 127.0.0.1:49980:49980/tcp
+    # devices:
+    #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+
+
 
 version: '3.7'
 volumes:
