@@ -1,0 +1,21 @@
+{
+    "name": "ExampleBACnetDevice",
+    "description": "Example BACnet device",
+    "adminState": "UNLOCKED",
+    "operatingState": "ENABLED",
+    "protocols": {
+        "BACnet-IP": {
+            "DeviceInstance": "192.168.50.234"
+        }
+    },
+    "labels": [
+        "amktest"
+    ],
+    "responseDelay": 0,
+    "service": {
+        "name": "device-bacnet-ip"
+    },
+    "profile": {
+        "name": "SimpleServer"
+    }
+}
