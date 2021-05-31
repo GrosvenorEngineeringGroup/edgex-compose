@@ -9,3 +9,7 @@
 # Bacnet discovery
 
 `curl -X POST localhost:49980/api/v1/discovery`
+
+# Add Bacnet device through API
+
+`curl --request POST --url 'http://localhost:48081/api/v1/device' --header 'content-type: application/json' -d '@./AddDevice.json'`
