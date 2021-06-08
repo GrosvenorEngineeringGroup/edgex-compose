@@ -5,7 +5,7 @@
     "operatingState": "ENABLED",
     "protocols": {
         "BACnet-IP": {
-            "DeviceInstance": "192.168.50.234"
+            "DeviceInstance": "172.27.0.15"
         }
     },
     "labels": [

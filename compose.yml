@@ -385,6 +385,13 @@ services:
     - 127.0.0.1:49980:49980
     # devices:
     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+  # bacserv:
+  #   container_name: bacserv
+  #   image: geg-bacserv
+  #   hostname: bacserv
+  #   networks:
+  #     edgex-network: {}
+
 
 
 
