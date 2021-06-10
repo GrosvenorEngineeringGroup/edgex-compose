@@ -90,6 +90,8 @@ services:
       EDGEX_SECURE: "false"
     hostname: edgex-core-consul
     image: edgexfoundry/docker-edgex-consul:1.3.0
+    extra_hosts:
+      - "edgex-device-bacnet:192.168.50.193"
     networks:
       edgex-network: {}
     ports:
@@ -329,8 +331,8 @@ services:
       - compose-builder/common.env
     environment:
       SERVICE_HOST: edgex-device-bacnet
-    ports:
-    - 127.0.0.1:49980:49980
+    # ports:
+    # - 127.0.0.1:49980:49980
     extra_hosts:
       - "edgex-core-data:127.0.0.1"
       - "edgex-core-metadata:127.0.0.1"
