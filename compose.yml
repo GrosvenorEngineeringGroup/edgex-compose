@@ -91,7 +91,7 @@ services:
     hostname: edgex-core-consul
     image: edgexfoundry/docker-edgex-consul:1.3.0
     extra_hosts:
-      - "edgex-device-bacnet:192.168.50.193"
+      - "edgex-device-bacnet:host-gateway"
     networks:
       edgex-network: {}
     ports:
